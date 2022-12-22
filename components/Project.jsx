@@ -16,25 +16,25 @@ function Project() {
               <ProjectItems
               title='Property Finder' 
               backgroundImg={propertyImg} 
-              projectUrl='/propery'
+              projectUrl='/property'
               />
 
               <ProjectItems
               title='Crypto App' 
               backgroundImg={cryptoImg} 
-              projectUrl='/propery'
+              projectUrl='/property'
               />
 
               <ProjectItems
               title='Movie App' 
               backgroundImg={netflixImg} 
-              projectUrl='/propery'
+              projectUrl='/property'
               />
 
               <ProjectItems
               title='Property Finder' 
               backgroundImg={twitchImg} 
-              projectUrl='/propery'
+              projectUrl='/property'
               />
 
             </div>

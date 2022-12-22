@@ -2,10 +2,29 @@ import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const[shadow, setShadow] = useState(false)
+  const[navBg, setNavBg] = useState('#ecf0f3')
+  const[linkColor, setLinkColor] = useState('#1f2937')
+  const router = useRouter
+
+   useEffect(() => {
+     if (
+       router.asPath === '/property' ||
+       router.asPath === '/crypto' ||
+       router.asPath === '/netflix' ||
+       router.asPath === '/twitch'
+     ) {
+       setNavBg('transparent');
+       setLinkColor('#ecf0f3');
+     } else {
+       setNavBg('#ecf0f3');
+     setLinkColor('#1f2937');
+   }
+ }, [router]);
 
   const handleNav = () =>{
     setNav(!nav);
@@ -24,9 +43,11 @@ const Navbar = () => {
   
    
   return (
-    <div className={shadow ? 'fixed w-full h-20 shadow-lg z-[100]' : 'fixed w-full h-20  z-[100]'}>
+    <div style={{ backgroundColor: `${navBg}` }} className={shadow ? 'fixed w-full h-20 shadow-lg z-[100]' : 'fixed w-full h-20  z-[100]'}>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+        <Link href='/'>
         <Image src="/../public/asset/logo.png" width='135' height='50' alt="" />
+        </Link>
         <div>
           <ul className='hidden md:flex mx-5'>
             <Link href='/'>
@@ -54,7 +75,10 @@ const Navbar = () => {
         <div className={nav ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' : 
             'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
           <div className='flex w-full items-center justify-between'>
+            <Link href='/'>
             <Image src="/../public/asset/logo.png" width='87' height='35' alt="" />
+
+            </Link>
             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
               <AiOutlineClose/>
             </div>
@@ -63,21 +87,21 @@ const Navbar = () => {
             <p className='text-gray-700 mb-2'>Let's transform your business</p>
           </div>
           <div className='flex flex-col'>
-            <ul>
-              <Link href=''>
-                <li className='py-2 text-sm'>Home</li>
+            <ul style={{ color: `${linkColor}` }}>
+              <Link href='/'>
+                <li onClick={()=>setNav(false)} className='py-2 text-sm'>Home</li>
               </Link>
-              <Link href=''>
-                <li className='py-2 text-sm'>About</li>
+              <Link href='/#about'>
+                <li onClick={()=>setNav(false)} className='py-2 text-sm'>About</li>
               </Link>
-              <Link href=''>
-                <li className='py-2 text-sm'>Technology</li>
+              <Link href='/#tech'>
+                <li onClick={()=>setNav(false)} className='py-2 text-sm'>Technology</li>
               </Link>
-              <Link href=''>
-                <li className='py-2 text-sm'>Team</li>
+              <Link href='/#project'>
+                <li onClick={()=>setNav(false)} className='py-2 text-sm'>Project</li>
               </Link>
-              <Link href=''>
-                <li className='py-2 text-sm'>Press</li>
+              <Link href='/#contact'>
+                <li onClick={()=>setNav(false)} className='py-2 text-sm'>Contact</li>
               </Link>
             </ul>
           </div>   
