@@ -9,19 +9,19 @@ function Main() {
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
             <div>
                 <p className='capitalize tracking-wider text-gray-600'>Securing your data for efficiency</p>
-                <h1 className='capitalize py-4 text-gray-700 text-5xl font-bold'>Hi, I'm <span className='text-orange-400'>Samtabe</span></h1>
+                <h1 className='capitalize py-4 text-gray-700 text-5xl font-bold'>Hi, I&apos; m <span className='text-orange-400'>Samtabe</span></h1>
                 <h1 className='capitalize py-2  text-gray-700 text-5xl font-bold'>
-                    I'm a data analyst
+                    I&apos; m a data analyst
                 </h1>
                 <p className='py-4 text-gray-600 max-w-[65%] m-auto'>
                     There are many variations of passages of 
                     Lorem Ipsum available, but the majority have 
                     suffered alteration in some form, by injected 
-                    humour, or randomised words which don't look even
+                    humour, or randomised words which dont look even
                     suffered alteration in some form, by injected 
-                    humour, or randomised words which don't look even
+                    humour, or randomised words which dont look even
                     suffered alteration in some form, by injected 
-                    humour, or randomised words which don't look even 
+                    humour, or randomised words which dont look even 
                 </p>
                 <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
                     <div className='rounded-full shadow-lg hover:scale-110  shadow-gray-400 p-6 cursor-pointer'>

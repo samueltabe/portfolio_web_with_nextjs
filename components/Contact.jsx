@@ -21,7 +21,7 @@ function Contact() {
                         <div>
                             <h2 className='py-2 text-xl text-orange-300 font-semibold'>Name Here</h2>
                             <p>Data Analyst</p>
-                            <p className='py-4'>I am available for freelance or full time position. Contact me let's talk</p>
+                            <p className='py-4'>I am available for freelance or full time position. Contact me let&apos;s talk</p>
                         </div>
                         <div>
                         <p className='text-xl pt-8'>Connect With Me</p>

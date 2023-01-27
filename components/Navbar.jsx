@@ -84,7 +84,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className='border-b border-gray-300 mb-5'>
-            <p className='text-gray-700 mb-2'>Let's transform your business</p>
+            <p className='text-gray-700 mb-2'>Let&apos; s transform your business</p>
           </div>
           <div className='flex flex-col'>
             <ul style={{ color: `${linkColor}` }}>
